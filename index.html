@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Страница сложения двух чисел</title>
+
+<script>
+function addition() {
+
+var a = parseFloat(document.getElementById('a').value); //Назначаем переменную первого числа
+var b = parseFloat(document.getElementById('b').value); //Назначаем переменную второго числа
+
+if (isNaN(a)==true) {alert("Поле №1 пустое!")};  //Условие, если первое поле пусто
+if (isNaN(b)==true) {alert("Поле №2 пустое!")}; //Условие, если второе поле пусто
+
+var c = a + b; //Сложение и присвоение результата переменной с
+alert('Результат: '+ c.toFixed(2)); //Вывод результата с точностью два знака после запятой
+
+}
+
+</script>
+
+
+	</head>
+	<body>
+
+<form>
+	<p><b>Первое число:</b> <p><input id="a" type="text" value="0.1"> </p> 
+	<p><b>Второе число:</b><p><input id="b" type="text" value="0.2"> </p> 
+<input type="button" value="Сложить" onclick="addition();"><br> 
+</form>
+<div id="result"></div> 
+
+	</body>
+</html>
